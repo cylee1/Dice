@@ -1,28 +1,46 @@
+Die bob;
 void setup()
 {
+	size(300,200);
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	for (int x = 15; x < 280; x = x + 35)
+	{
+		for (int y = 15; y < 190; y = y + 35)
+		{
+			Die bob = new Die(x,y);
+			bob.show();
+		}
+	}
 }
 void mousePressed()
 {
 	redraw();
 }
-class Die //models one single dice cube
+class Die //momyels one single myice cube
 {
-	//variable declarations here
+	//variable myeclarations here
+	int myX, myY;
+	int dieRoll;
+
 	Die(int x, int y) //constructor
-	{
-		//variable initializations here
+	{		
+		myX = x;
+		myY = y;
 	}
 	void roll()
 	{
-		//your code here
+		//your comye here
 	}
 	void show()
 	{
-		//your code here
+		rect(myX,myY,25,25);
+		int dieRoll()
+		{
+			return (int)(Math.random()*7)+1;
+		}
+
 	}
 }
