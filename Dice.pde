@@ -1,7 +1,7 @@
 Die bob;
 void setup()
 {
-	size(300,200);
+	size(300,210);
 	noLoop();
 }
 void draw()
@@ -14,6 +14,7 @@ void draw()
 			bob.show();
 		}
 	}
+	
 }
 void mousePressed()
 {
@@ -32,15 +33,57 @@ class Die //momyels one single myice cube
 	}
 	void roll()
 	{
-		//your comye here
+	 	dieRoll = (int)(Math.random()*6)+1;
 	}
 	void show()
 	{
+		fill(255);
 		rect(myX,myY,25,25);
-		int dieRoll()
+		roll();
+		if (dieRoll == 1)
+			{
+				fill(0);
+				rect(myX + 10, myY + 10, 5, 5);
+			}
+		else if(dieRoll == 2)
+			{
+				fill(0);
+				rect(myX + 5, myY + 5, 5, 5);
+				rect(myX + 15, myY + 15, 5, 5);
+			}
+		else if(dieRoll == 3)
 		{
-			return (int)(Math.random()*7)+1;
+			fill(0);
+			rect(myX + 3, myY + 3, 5, 5);
+			rect(myX + 10, myY + 10, 5, 5);
+			rect(myX + 17, myY + 17, 5, 5);
 		}
-
+		else if(dieRoll == 4)
+		{
+			fill(0);
+			rect(myX + 3, myY + 3, 5, 5);
+			rect(myX + 3, myY + 17, 5, 5);
+			rect(myX + 17, myY + 3, 5, 5);
+			rect(myX + 17, myY + 17, 5, 5);
+		}
+		else if(dieRoll == 5)
+		{
+			fill(0);
+			rect(myX + 3, myY + 3, 5, 5);
+			rect(myX + 3, myY + 17, 5, 5);
+			rect(myX + 17, myY + 3, 5, 5);
+			rect(myX + 17, myY + 17, 5, 5);
+			rect(myX + 10, myY + 10, 5, 5);
+		}
+		else if(dieRoll == 6)
+		{
+			fill(0);
+			rect(myX + 3, myY + 3, 5, 5);
+			rect(myX + 3, myY + 10, 5, 5);
+			rect(myX + 3, myY + 17, 5, 5);
+			rect(myX + 17, myY + 3, 5, 5);
+			rect(myX + 17, myY + 10, 5, 5);
+			rect(myX + 17, myY + 17, 5, 5);
+		}
 	}
 }
