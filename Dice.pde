@@ -4,9 +4,10 @@ void setup()
 {
 	size(300,210);
 	noLoop();
-//	String[] fontList = PFont.list();
-//	printArray(fontList);
-	myFont = createFont("8BIT WONDER Nominal", 12);
+	String[] fontList = PFont.list();
+	printArray(fontList);
+//	myFont = createFont("8BIT WONDER Nominal", 12);
+	myFont = createFont("Impact", 18);
 }
 void draw()
 {
@@ -26,7 +27,7 @@ void draw()
 	}
 	fill(0);
  	textFont(myFont);
-	text("Total " + sum, 190, 200);
+	text("Total " + sum, 220, 203);
 }
 
 void mousePressed()
