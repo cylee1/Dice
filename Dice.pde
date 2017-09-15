@@ -4,8 +4,8 @@ void setup()
 {
 	size(300,210);
 	noLoop();
-	String[] fontList = PFont.list();
-	printArray(fontList);
+//	String[] fontList = PFont.list();
+//	printArray(fontList);
 //	myFont = createFont("8BIT WONDER Nominal", 12);
 	myFont = createFont("Impact", 18);
 }
